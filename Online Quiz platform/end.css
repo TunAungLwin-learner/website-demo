@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #44525e;
+    --secondary-color: #ecf5ff;
+    --accent-color: #333;
+    --background-image: url('end.jpg'); /* Replace with your image */
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--accent-color);
+}
+
+body {
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+#end {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+#finalScore {
+    font-size: 5rem;
+    color: rgb(233, 224, 224);
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+input {
+    width: 100%;
+    max-width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.2);
+    background-color: rgba(189, 178, 178, 0.8); /* Semi-transparent white */
+}
+
+input::placeholder {
+    color: #c9aeae;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    width: 20rem;
+    text-align: center;
+    border: none;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: rgb(226, 207, 207);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: all 150ms ease-in-out;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: translateY(-0.1rem);
+    background-color: rgba(6, 28, 48, 0.9);
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(91, 159, 194, 0.5);
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+    background-color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #finalScore {
+        font-size: 4rem;
+    }
+
+    input {
+        width: 100%;
+        max-width: 15rem;
+        padding: 1rem;
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 15rem;
+        font-size: 1.6rem;
+    }
+}

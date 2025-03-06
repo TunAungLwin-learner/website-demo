@@ -1,0 +1,111 @@
+:root {
+    --primary-color: #2f4c66;
+    --secondary-color: #ecf5ff;
+    --accent-color: #333;
+    --background-image: url('high1.jpg'); /* Replace with your image */
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--accent-color);
+}
+
+body {
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+#highScores {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+#finalScore {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#highScoresList {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 4rem;
+}
+
+.high-score {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    background-color: rgba(194, 184, 184, 0.8); /* Semi-transparent white */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 150ms, box-shadow 150ms;
+    color: var(--accent-color);
+}
+
+.high-score:hover {
+    transform: scale(1.025);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    display: inline-block;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    width: 20rem;
+    text-align: center;
+    border: none;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: rgb(150, 140, 140);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: all 150ms ease-in-out;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: translateY(-0.1rem);
+    background-color: rgba(135, 153, 168, 0.9);
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(110, 173, 207, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #finalScore {
+        font-size: 3rem;
+    }
+
+    .high-score {
+        font-size: 2rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 15rem;
+        font-size: 1.6rem;
+    }
+}
